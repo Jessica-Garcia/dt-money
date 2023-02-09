@@ -19,8 +19,8 @@ export const Transactions = () => {
               <tr key={transaction.id}>
                 <td width="50%">{transaction.description}</td>
                 <td>
-                  <PriceHighlight variant="income">
-                    R$ {transaction.price}
+                  <PriceHighlight variant={transaction.type}>
+                    R${transaction.price}
                   </PriceHighlight>
                 </td>
                 <td>{transaction.category}</td>
