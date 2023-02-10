@@ -3,11 +3,14 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/theme/default";
 import { Router } from "./Router";
+import { TransactionsProvider } from "./contexts/TransactionsContext";
 export const App = () => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
-        <Router />
+        <TransactionsProvider>
+          <Router />
+        </TransactionsProvider>
       </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
