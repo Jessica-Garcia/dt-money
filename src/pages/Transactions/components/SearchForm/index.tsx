@@ -35,6 +35,7 @@ export const SearchForm = () => {
         {...register("query")}
         type="text"
         placeholder="Busque por transações"
+        autoComplete="off"
       />
       <button type="submit" disabled={isSubmitting}>
         <MagnifyingGlass size={20} />
